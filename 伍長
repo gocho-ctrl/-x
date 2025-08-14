@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伍長院のBot工房</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOSライブラリ -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <style>
+    /* 光るボタン */
+    .glow-button {
+      position: relative;
+      z-index: 0;
+    }
+    .glow-button:before {
+      content: '';
+      position: absolute;
+      top: -5px; left: -5px; bottom: -5px; right: -5px;
+      background: linear-gradient(45deg, #f0f, #0ff, #f0f, #0ff);
+      z-index: -1;
+      filter: blur(20px);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 9999px;
+      animation: rotate 4s linear infinite;
+    }
+    .glow-button:hover:before {
+      opacity: 1;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- ヘッダー -->
+  <header class="bg-gradient-to-r from-purple-600 to-pink-600 text-white fixed w-full z-50 shadow-lg">
+    <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6">
+      <h1 class="text-2xl font-bold tracking-wider mb-2 sm:mb-0">伍長院のBot工房</h1>
+      <a href="https://discord.gg/QsURS5t9xW" class="bg-white text-purple-700 px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition glow-button">Discordへ招待</a>
+    </div>
+  </header>
+
+  <!-- ファーストビュー -->
+  <section class="text-center py-28 sm:py-32 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600">
+    <h2 class="text-3xl sm:text-5xl font-extrabold mb-4 sm:mb-6 animate-pulse" data-aos="fade-down">Discord × プログラミングで最強ツールを提供</h2>
+    <p class="text-lg sm:text-xl mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">自動化Bot・テンプレート・教材・サポートまで、すべてお任せください</p>
+    <a href="#products" class="bg-white text-purple-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-gray-100 transition transform hover:scale-105 glow-button" data-aos="zoom-in" data-aos-delay="400">サービスを見る</a>
+  </section>
+
+  <!-- 実績 -->
+  <section class="container mx-auto py-16 sm:py-20 px-4 sm:px-0">
+    <h3 class="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-12 text-purple-400" data-aos="fade-up">実績・信頼性</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+      <div class="bg-gradient-to-r from-purple-700 to-pink-700 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-right">
+        <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">導入サーバー数</h4>
+        <p class="text-gray-200">現在500以上のサーバーで活躍中！</p>
+      </div>
+      <div class="bg-gradient-to-r from-purple-700 to-pink-700 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-up">
+        <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">GitHub実績</h4>
+        <p class="text-gray-200">公開リポジトリ 10以上、スター数 200以上</p>
+      </div>
+      <div class="bg-gradient-to-r from-purple-700 to-pink-700 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-left">
+        <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">ユーザー満足度</h4>
+        <p class="text-gray-200">使いやすい・サポート丁寧と高評価</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 商品・サービス -->
+  <section id="products" class="py-16 sm:py-20 bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-800 px-4 sm:px-0">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12 text-pink-300" data-aos="fade-up">サービス・商品</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+        <div class="bg-gray-900 bg-opacity-80 p-6 sm:p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-purple-500/50 transition duration-500" data-aos="flip-left" data-aos-delay="100">
+          <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-purple-300">自販機Bot</h4>
+          <p class="text-gray-200 mb-4">PayPay連携可能でサーバー内販売を自動化</p>
+          <a href="https://discord.gg/QsURS5t9xW" class="text-pink-400 font-bold hover:underline glow-button">購入/導入はこちら</a>
+        </div>
+        <div class="bg-gray-900 bg-opacity-80 p-6 sm:p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-purple-500/50 transition duration-500" data-aos="flip-left" data-aos-delay="200">
+          <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-purple-300">プログラミング教材</h4>
+          <p class="text-gray-200 mb-4">初心者向けから中級者向けまで、実践的な内容</p>
+          <a href="https://discord.gg/QsURS5t9xW" class="text-pink-400 font-bold hover:underline glow-button">購入はこちら</a>
+        </div>
+        <div class="bg-gray-900 bg-opacity-80 p-6 sm:p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-purple-500/50 transition duration-500" data-aos="flip-left" data-aos-delay="300">
+          <h4 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-purple-300">個別サポート</h4>
+          <p class="text-gray-200 mb-4">Bot作成・カスタマイズ・導入まで完全サポート</p>
+          <a href="https://discord.gg/QsURS5t9xW" class="text-pink-400 font-bold hover:underline glow-button">相談はこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="container mx-auto py-16 sm:py-20 px-4 sm:px-0">
+    <h3 class="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-12 text-purple-400" data-aos="fade-up">お客様の声</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+      <div class="bg-gradient-to-r from-purple-800 to-pink-800 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-right">
+        <p class="text-gray-200 mb-4">「導入後すぐに売上が2倍になりました！」</p>
+        <p class="font-semibold text-pink-300">– サーバー管理者A</p>
+      </div>
+      <div class="bg-gradient-to-r from-purple-800 to-pink-800 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-up">
+        <p class="text-gray-200 mb-4">「サポートが丁寧で安心して任せられました」</p>
+        <p class="font-semibold text-pink-300">– ユーザーB</p>
+      </div>
+      <div class="bg-gradient-to-r from-purple-800 to-pink-800 p-6 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500" data-aos="fade-left">
+        <p class="text-gray-200 mb-4">「想像以上のクオリティで大満足です！」</p>
+        <p class="font-semibold text-pink-300">– ユーザーC</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-gray-800 py-6 text-center text-sm text-gray-400">
+    <p>&copy; 2025 伍長院のBot工房 | All Rights Reserved</p>
+  </footer>
+
+  <!-- AOS初期化 -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
